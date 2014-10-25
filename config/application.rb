@@ -6,6 +6,7 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
+require 'rack-cas/session_store/active_record'
 
 Bundler.require(*Rails.groups)
 
@@ -33,6 +34,7 @@ module CASinoRack
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower')
 
+    config.rack_cas.session_store = RackCAS::ActiveRecordStore
     config.rack_cas.server_url = 'http://localhost:3000'
   end
 end
