@@ -1,8 +1,19 @@
-<h1>Demo</h1>
-<h2>User</h2>
-<%= debug @user %>
-<a href="/logout">Logout</a>
-<h2>Params</h2>
-<%= debug params %>
-<h2>Session</h2>
-<%= debug session %>
+<section class='row'>
+  <h1><%= t('flash.sessions.user') %></h1>
+
+  <section class="bs bs-info">
+    <%= debug @user %>
+  </section>
+
+  <h2><%= t('flash.sessions.params') %></h2>
+
+  <section class="bs bs-alert">
+    <%= debug params %>
+  </section>
+
+  <h2><%= t('flash.sessions.session') %></h2>
+
+  <section class="bs bs-alert">
+    <%= debug session %>
+  </section>
+</section>

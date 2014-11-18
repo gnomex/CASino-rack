@@ -1,5 +1,7 @@
 pt-BR:
   flash:
+    app:
+      title: 'Exemplo'
     auth:
       alert: "Você precisar fazer o login para acessar esta página."
 
@@ -8,6 +10,9 @@ pt-BR:
         notice: "Seu cadastro foi realizado com sucesso!"
 
     sessions:
+      params: 'Parâmetros'
+      session: 'Sessão'
+
       create:
         notice: "Que bom que você voltou!"
         alert: "E-mail/senha inválidos."

@@ -2,21 +2,17 @@ source 'https://rubygems.org'
 
 ruby '2.1.3'
 
-gem 'rails', '~> 4.1.4'
-gem "protected_attributes", "~> 1.0.5"
+gem 'rails', '~> 4.1.6'
 gem 'pg'
 
 gem 'unicorn', '~> 4.8.2'
-# gem 'unicorn-worker-killer'
 gem 'mina', '~> 0.3.0'
+gem 'mina-unicorn', :require => false
 
 gem 'rack-cas', '~> 0.9.2'
 
-gem 'newrelic_rpm', '~> 3.9.5.251'
-
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
-  # gem "less-rails", "~> 2.5.0"
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.0.0'
   gem 'turbolinks'

@@ -20,7 +20,7 @@ module CASinoRack
     config.i18n.enforce_available_locales = false
     config.encoding = "utf-8"
 
-    config.active_record.whitelist_attributes = true
+    # config.active_record.whitelist_attributes = true
     config.action_controller.action_on_unpermitted_parameters = :raise
 
     # To re-enable this authenticity token for remote forms
@@ -35,6 +35,6 @@ module CASinoRack
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower')
 
     config.rack_cas.session_store = RackCAS::ActiveRecordStore
-    config.rack_cas.server_url = 'http://localhost:3000'
+    config.rack_cas.server_url = 'http://casino:3000'
   end
 end
