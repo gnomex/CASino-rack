@@ -35,6 +35,6 @@ module CASinoRack
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower')
 
     config.rack_cas.session_store = RackCAS::ActiveRecordStore
-    config.rack_cas.server_url = 'http://casino:3000'
+    config.rack_cas.server_url = 'http://192.168.122.74'
   end
 end
