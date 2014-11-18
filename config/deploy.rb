@@ -56,8 +56,8 @@ end
 
 desc "Crate database and run migrations"
 task :database do
-  queue! %[bundle exec rake db:setup RAILS_ENV='production']
-  # invoke :'rails:db_migrate'
+  # queue! %[bundle exec rake db:setup RAILS_ENV='production']
+  invoke :'rails:db_migrate'
 end
 
 desc "Deploys the current version to the server."

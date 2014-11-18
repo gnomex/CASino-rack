@@ -1,19 +1,40 @@
-<section class='row'>
+<section class='row-fluid'>
   <h1><%= t('flash.sessions.user') %></h1>
 
-  <section class="bs bs-info">
-    <%= debug @user %>
+  <section>
+    <h1><i class="glyphicon glyphicon-user"> <%= @user[:user] %> </i></h1>
+    <section class="bs-callout info">
+      <%= @user[:ticket] %>
+    </section>
+
+    <section class="bs-callout alert">
+      <% @user[:extra_attributes].each do |hash, value| %>
+        <table class="table .table-hover">
+          <thead>
+            <tr>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><%= hash %></th>
+              <th><%= value %></th>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
+    </section>
   </section>
 
   <h2><%= t('flash.sessions.params') %></h2>
 
-  <section class="bs bs-alert">
-    <%= debug params %>
+  <section class="bs-callout alert">
+    <%= params.inspect %>
   </section>
 
   <h2><%= t('flash.sessions.session') %></h2>
 
-  <section class="bs bs-alert">
-    <%= debug session %>
+  <section class="bs-callout alert">
+    <%= session.inspect %>
   </section>
 </section>

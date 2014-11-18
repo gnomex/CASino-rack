@@ -2,6 +2,7 @@ pt-BR:
   flash:
     app:
       title: 'Exemplo'
+      name: 'Aplicação de Exemplo 1'
     auth:
       alert: "Você precisar fazer o login para acessar esta página."
 
@@ -12,6 +13,7 @@ pt-BR:
     sessions:
       params: 'Parâmetros'
       session: 'Sessão'
+      user: 'Usuário'
 
       create:
         notice: "Que bom que você voltou!"
